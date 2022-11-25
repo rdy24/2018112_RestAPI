@@ -17,7 +17,7 @@ import com.example.newsapp.model.ArticlesItem;
 import java.util.List;
 
 public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder> {
-    private Context context;
+    private final Context context;
     private List<ArticlesItem> newsLists;
 
     public NewsAdapter(Context context, List<ArticlesItem> newsLists) {
@@ -53,7 +53,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder
         return newsLists.size();
     }
 
-    public class NewsViewHolder extends RecyclerView.ViewHolder {
+    public static class NewsViewHolder extends RecyclerView.ViewHolder {
         ImageView imageView;
         TextView textView1, textView2;
         public NewsViewHolder(@NonNull View itemView) {
