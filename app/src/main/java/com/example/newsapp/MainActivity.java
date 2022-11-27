@@ -12,6 +12,8 @@ import com.example.newsapp.adapter.NewsAdapter;
 import com.example.newsapp.model.NewsList;
 import com.example.newsapp.viewmodel.NewsViewModel;
 
+import java.util.Objects;
+
 public class MainActivity extends AppCompatActivity{
   RecyclerView recylerView;
   NewsAdapter adapter;
@@ -21,6 +23,7 @@ public class MainActivity extends AppCompatActivity{
   protected void onCreate(Bundle savedInstanceState) {
     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
     super.onCreate(savedInstanceState);
+    Objects.requireNonNull(getSupportActionBar()).setTitle("RESTAPI_2018112");
     setContentView(R.layout.activity_main);
     recylerView = findViewById(R.id.recyclerView);
     LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
